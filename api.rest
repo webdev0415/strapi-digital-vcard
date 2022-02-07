@@ -1,0 +1,28 @@
+### JWT
+POST http://localhost:1337/api/auth/local
+Content-Type: application/json
+
+{
+  "identifier": "test@bschauer.de",
+  "password": "abc"
+}
+###
+
+
+### companies
+GET http://localhost:1337/api/companies?populate=*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjM5NjgxOTYxLCJleHAiOjE2NDIyNzM5NjF9.w6Qs4tUcVRIyyQS4fNbJaEFUr3hyR6rc1xBQatLSGOo
+Content-Type: application/json
+###
+
+### vcards
+GET http://localhost:1337/api/vcards?populate=*
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjM5NjgxOTYxLCJleHAiOjE2NDIyNzM5NjF9.w6Qs4tUcVRIyyQS4fNbJaEFUr3hyR6rc1xBQatLSGOo
+Content-Type: application/json
+###
+
+### vcards
+GET http://localhost:1337/api/vcards/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjM5NjgxOTYxLCJleHAiOjE2NDIyNzM5NjF9.w6Qs4tUcVRIyyQS4fNbJaEFUr3hyR6rc1xBQatLSGOo
+Content-Type: application/json
+###

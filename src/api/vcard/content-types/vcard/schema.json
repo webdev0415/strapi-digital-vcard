@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vcards",
+  "info": {
+    "singularName": "vcard",
+    "pluralName": "vcards",
+    "displayName": "vCard",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "male",
+        "female",
+        "diverse"
+      ]
+    },
+    "workPhone": {
+      "type": "biginteger"
+    },
+    "workEmail": {
+      "type": "email"
+    },
+    "company": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::company.company",
+      "inversedBy": "v_cards"
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "portrait": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "birthday": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
